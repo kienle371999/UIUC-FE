@@ -1,0 +1,34 @@
+.light-theme {
+  background-color: #ffffff !important;
+}
+
+.ant-layout-header  {
+  padding-right: 24px !important;
+  padding-left: 24px !important;
+}
+
+.avatar-icon {
+  margin-right: 15px;
+}
+
+.avatar-name {
+  margin: 0 auto;
+}
+
+.logo-uuic .uiuc-name {
+  color: #702DFF;
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+.logo-uuic {
+  padding: 24px;
+}
+
+.ml-10 {
+  margin: 0 0 0 10px !important;
+}
+
+.item-right {
+  text-align: right;
+}
