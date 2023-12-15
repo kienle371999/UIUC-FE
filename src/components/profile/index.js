@@ -18,15 +18,144 @@ import Person from "../../imgs/person.jpg";
 import "./index.css";
 import { useState } from "react";
 import { EditOutlined } from "@ant-design/icons";
-import { InternalBreadcrumbItem } from "antd/es/breadcrumb/BreadcrumbItem";
 
 const { Text } = Typography;
+const { TextArea } = Input;
+
+const publications = [
+  {
+    authors: "Hongyun Cai, Vincen W.Zheng, Chen-Chua Chang",
+    name: (
+      <span>
+        <Text strong>
+          A Comprehensive Survey of Graph EmbeddingLProblems, Techniques, and
+          Applications.
+        </Text>
+        <Text> IEEE Trans, Knowl, Data Eng (2018)</Text>
+      </span>
+    ),
+    tag: "Graph Embedding",
+  },
+  {
+    authors: "A. Abdi, Wing-Cheong Lau, Mohamed‐Slim Alouini, M. Kaveh",
+    name: (
+      <span>
+        <Text strong>
+          A new simple model for land mobile satellite channels: first- and
+          second-order statistics.
+        </Text>
+        <Text> IEEE Transactions on Wireless Communications (2003).</Text>
+      </span>
+    ),
+
+    tag: "Remote Sensing",
+  },
+  {
+    authors: "A. Abdi, M. Kaveh",
+    name: (
+      <span>
+        <Text strong>
+          A space-time correlation model for multielement antenna systems in
+          mobile fading channels.
+        </Text>
+        <Text> IEEE Journal on Selected Areas in Communications (2002).</Text>
+      </span>
+    ),
+
+    tag: "Mobile Fading Channel",
+  },
+  {
+    authors: "A. Abdi, Jacob Barger, M. Kaveh",
+    name: (
+      <span>
+        <Text strong>
+          A Comprehensive Survey of Graph EmbeddingLProblems, Techniques, and
+          Applications.
+        </Text>
+        <Text> IEE Trans, Knowl, Data Eng (2018).</Text>
+      </span>
+    ),
+    tag: "Graph Embedding",
+  },
+  {
+    authors: "Hongyun Cai, Vincen W.Zheng, Chen-Chua Chang",
+    name: (
+      <span>
+        <Text strong>
+          A parametric model for the distribution of the angle of arrival and
+          the associated correlation function and power spectrum at the mobile
+          station.
+        </Text>
+        <Text> IEEE Transactions on Vehicular Technology (2002).</Text>
+      </span>
+    ),
+    tag: "Transportation Engineering",
+  },
+  {
+    authors: "Mohamed‐Slim Alouini, A. Abdi, M. Kaveh",
+    name: (
+      <span>
+        <Text strong>
+          Sum of gamma variates and performance of wireless communication
+          systems over Nakagami-fading channels.
+        </Text>
+        <Text> IEEE Transactions on Vehicular Technology (2001).</Text>
+      </span>
+    ),
+    tag: "Communication",
+  },
+];
+
+const awards = [
+  {
+    author:
+      "Ali Abdi ali.abdi@njit.edu (Principal Investigator) Michael Ehrlich (Co-Principal Investigator)",
+    name: (
+      <span>
+        <Text strong>
+          PFI:AIR - TT: A Novel Vector Acoustic Communication Technology for
+          High Speed Underwater Modems, Accelerating Innovation Rsrch (2015),
+        </Text>
+        <Text> Accelerating Innovation Rsrch (2015)</Text>
+      </span>
+    ),
+    amount: "3000 USD",
+  },
+  {
+    author: "Ali Abdi ali.abdi@njit.edu",
+    name: (
+      <span>
+        <Text strong>
+          Collaborative Research: Data Communication via Particle Velocity
+          Channels - A Paradigm Shift in Underwater Acoustic Communication,
+        </Text>
+        <Text> SIGNAL PROCESSING SYS</Text>
+      </span>
+    ),
+    amount: "5000 USD",
+  },
+  {
+    author:
+      "Ali Abdi ali.abdi@njit.edu (Principal Investigator) Michael Ehrlich (Co-Principal Investigator)",
+    name: (
+      <span>
+        <Text strong>
+          I-Corps: Data communication via the vector components of the acoustic
+          field,{" "}
+        </Text>
+        <Text> I-Corps (2013)</Text>
+      </span>
+    ),
+    amount: "5000 USD",
+  },
+];
+
+const experience = {
+  university: "University of Tabriz",
+  duration: "2000 - Now",
+};
 
 const Profile = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [page, setPage] = useState(1);
-
   const [personItems, setPersonItems] = useState([
     {
       key: "Name",
@@ -46,43 +175,12 @@ const Profile = () => {
         "Brian Berry is a distinguished academic, currently serving as a Lloyd Viel Berkner Regental Professor",
     },
   ]);
-
-  const publications = [
-    {
-      authors: "Hongyun Cai, Vincen W.Zheng, Chen-Chua Chang",
-      name: "A Comprehensive Survey of Graph EmbeddingLProblems, Techniques, and Applications. IEE Trans, Knowl, Data Eng (2018).",
-      tag: "Graph Embedding",
-    },
-    {
-      authors: "Hongyun Cai, Vincen W.Zheng, Chen-Chua Chang",
-      name: "A Comprehensive Survey of Graph EmbeddingLProblems, Techniques, and Applications. IEE Trans, Knowl, Data Eng (2018).",
-      tag: "Graph Embedding",
-    },
-    {
-      authors: "Hongyun Cai, Vincen W.Zheng, Chen-Chua Chang",
-      name: "A Comprehensive Survey of Graph EmbeddingLProblems, Techniques, and Applications. IEE Trans, Knowl, Data Eng (2018).",
-      tag: "Graph Embedding",
-    },
-    {
-      authors: "Hongyun Cai, Vincen W.Zheng, Chen-Chua Chang",
-      name: "A Comprehensive Survey of Graph EmbeddingLProblems, Techniques, and Applications. IEE Trans, Knowl, Data Eng (2018).",
-      tag: "Graph Embedding",
-    },
-    {
-      authors: "Hongyun Cai, Vincen W.Zheng, Chen-Chua Chang",
-      name: "A Comprehensive Survey of Graph EmbeddingLProblems, Techniques, and Applications. IEE Trans, Knowl, Data Eng (2018).",
-      tag: "Graph Embedding",
-    },
-    {
-      authors: "Hongyun Cai, Vincen W.Zheng, Chen-Chua Chang",
-      name: "A Comprehensive Survey of Graph EmbeddingLProblems, Techniques, and Applications. IEE Trans, Knowl, Data Eng (2018).",
-      tag: "Graph Embedding",
-    },
-  ];
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPublications, setSelectedPublications] = useState(
     publications.slice(0, 3)
   );
+  const [selectedAwards, setSelectedAwards] = useState(awards.slice(0, 3));
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const enableChangePersonInfo = (index) => {
     setSelectedIndex(index);
@@ -97,8 +195,12 @@ const Profile = () => {
 
   const getPaginationPub = (page, pageSize) => {
     const pubs = publications.slice((page - 1) * pageSize, page * pageSize);
-    console.log(pubs, publications);
     setSelectedPublications(pubs);
+  };
+
+  const getPaginationAward = (page, pageSize) => {
+    const newAwards = awards.slice((page - 1) * pageSize, page * pageSize);
+    setSelectedAwards(newAwards);
   };
 
   const personAttachment = ["PUBLICATIONS", "AWARDS", "EXPERIENCES", "PEER"];
@@ -110,16 +212,13 @@ const Profile = () => {
             {selectedPublications.map((pub, index) => (
               <Space direction="vertical">
                 <Text>{pub.authors}</Text>
-                <Text strong>{pub.name}</Text>
+                {pub.name}
                 <Tag>{pub.tag}</Tag>
-                {index != selectedPublications.length - 1 ? (
-                  <Divider />
-                ) : (
-                  <div />
-                )}
+                <Divider />
               </Space>
             ))}
             <Pagination
+              className="fl-right"
               defaultCurrent={1}
               pageSize={3}
               total={publications.length}
@@ -127,18 +226,35 @@ const Profile = () => {
             />
           </div>
         );
-
-        publications.map((pub) => (
+      case "AWARDS":
+        return (
           <div>
-            <Text>{pub.author}</Text>
-            <Text strong>{pub.name}</Text>
-            <Tag>{pub.tag}</Tag>
-            <Divider />
+            {selectedAwards.map((award, index) => (
+              <Space direction="vertical">
+                <Text>{award.author}</Text>
+                {award.name}
+                <Tag>{award.amount}</Tag>
+                <Divider />
+              </Space>
+            ))}
+            <Pagination
+              className="fl-right"
+              defaultCurrent={1}
+              pageSize={2}
+              total={awards.length}
+              onChange={(page, pageSize) => getPaginationAward(page, pageSize)}
+            />
           </div>
-        ));
-        break;
+        );
+      case "EXPERIENCES":
+        return (
+          <Space direction="vertical">
+            <Text strong>{experience.university}</Text>
+            <Text>{experience.duration}</Text>
+          </Space>
+        );
       default:
-        return <div>{`HELLO ${item}`}</div>;
+        return <div />;
     }
   };
 
@@ -155,17 +271,25 @@ const Profile = () => {
                   <img
                     className="person-img"
                     src={Person}
-                    alt="Image of perople"
+                    alt="Avatar of the professor"
                   />
                 </Col>
                 <Col span={20}>
                   {personItems.map((item, index) => (
                     <div>
-                      <Input
-                        className="input-item"
-                        value={item.value}
-                        disabled="true"
-                      />
+                      {item.key === "Description" ? (
+                        <TextArea
+                          className="area-item"
+                          value={item.value}
+                          disabled="true"
+                        />
+                      ) : (
+                        <Input
+                          className="input-item"
+                          value={item.value}
+                          disabled="true"
+                        />
+                      )}
                       <EditOutlined
                         onClick={() => enableChangePersonInfo(index)}
                       />
@@ -178,12 +302,22 @@ const Profile = () => {
                     onOk={() => setIsModalOpen(false)}
                     onCancel={() => setIsModalOpen(false)}
                   >
-                    <Input
-                      value={personItems[selectedIndex].value}
-                      onChange={(e) =>
-                        changePersonInfo(selectedIndex, e.target.value)
-                      }
-                    />
+                    {personItems[selectedIndex].key === "Description" ? (
+                      <TextArea
+                        className="area-modal-item"
+                        value={personItems[selectedIndex].value}
+                        onChange={(e) =>
+                          changePersonInfo(selectedIndex, e.target.value)
+                        }
+                      />
+                    ) : (
+                      <Input
+                        value={personItems[selectedIndex].value}
+                        onChange={(e) =>
+                          changePersonInfo(selectedIndex, e.target.value)
+                        }
+                      />
+                    )}
                   </Modal>
                 </Col>
               </Row>

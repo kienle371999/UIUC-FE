@@ -29,10 +29,25 @@
 }
 
 .input-item {
-  width: fit-content;
+  width: 400px;
   margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.area-item {
+  width: 400px;
+  height: 120px !important;
+  margin-right: 20px;
+}
+
+.area-modal-item {
+  height: 120px !important;
 }
 
 .mt-10 {
   margin-top: 10px;
+}
+
+.fl-right {
+  float: right;
 }
