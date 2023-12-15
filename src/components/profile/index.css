@@ -1,8 +1,8 @@
-.university-site {
+.profile-site {
   height: 100vh;
 }
 
-.university-content {
+.profile-content {
   margin: 24px;
 }
 
@@ -22,4 +22,17 @@
 
 .selection-item {
   width: 150px;
+}
+
+.person-img {
+  width: 70%;
+}
+
+.input-item {
+  width: fit-content;
+  margin-right: 20px;
+}
+
+.mt-10 {
+  margin-top: 10px;
 }

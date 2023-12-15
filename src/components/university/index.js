@@ -73,6 +73,7 @@ const University = () => {
                     Category
                   </Title>
                   <Select
+                    className="selection-item"
                     defaultValue="lucy"
                     options={[{ value: "lucy", label: "Lucy" }]}
                   />
@@ -83,6 +84,7 @@ const University = () => {
                   </Title>
 
                   <Select
+                    className="selection-item"
                     defaultValue="lucy"
                     options={[{ value: "lucy", label: "Lucy" }]}
                   />
@@ -93,6 +95,7 @@ const University = () => {
                   </Title>
 
                   <Select
+                    className="selection-item"
                     defaultValue="lucy"
                     options={[{ value: "lucy", label: "Lucy" }]}
                   />
