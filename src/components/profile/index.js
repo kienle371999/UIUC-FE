@@ -148,6 +148,45 @@ const awards = [
     ),
     amount: "5000 USD",
   },
+  {
+    author: "Ali Abdi ali.abdi@njit.edu",
+    name: (
+      <span>
+        <Text strong>
+          I-Corps: Data communication via the vector components of the acoustic
+          field,{" "}
+        </Text>
+        <Text> I-Corps (2016)</Text>
+      </span>
+    ),
+    amount: "5000 USD",
+  },
+  {
+    author: "Ali Abdi ali.abdi@njit.edu",
+    name: (
+      <span>
+        <Text strong>
+          I-Corps: Data communication via the vector components of the acoustic
+          field,{" "}
+        </Text>
+        <Text> I-Corps (2020)</Text>
+      </span>
+    ),
+    amount: "8000 USD",
+  },
+  {
+    author: "Ali Abdi ali.abdi@njit.edu",
+    name: (
+      <span>
+        <Text strong>
+          I-Corps: Data communication via the vector components of the acoustic
+          field,{" "}
+        </Text>
+        <Text> I-Corps (2022)</Text>
+      </span>
+    ),
+    amount: "10000 USD",
+  },
 ];
 
 const experience = {
@@ -240,7 +279,7 @@ const Profile = () => {
             <Pagination
               className="fl-right"
               defaultCurrent={1}
-              pageSize={2}
+              pageSize={3}
               total={awards.length}
               onChange={(page, pageSize) => getPaginationAward(page, pageSize)}
             />
