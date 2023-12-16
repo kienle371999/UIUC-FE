@@ -276,24 +276,27 @@ const Profile = () => {
                 </Col>
                 <Col span={20}>
                   {personItems.map((item, index) => (
-                    <div>
-                      {item.key === "Description" ? (
-                        <TextArea
-                          className="area-item"
-                          value={item.value}
-                          disabled="true"
+                    <Space direction="vertical">
+                      <Text strong>{item.key}</Text>
+                      <div>
+                        {item.key === "Description" ? (
+                          <TextArea
+                            className="area-item"
+                            value={item.value}
+                            disabled="true"
+                          />
+                        ) : (
+                          <Input
+                            className="input-item"
+                            value={item.value}
+                            disabled="true"
+                          />
+                        )}
+                        <EditOutlined
+                          onClick={() => enableChangePersonInfo(index)}
                         />
-                      ) : (
-                        <Input
-                          className="input-item"
-                          value={item.value}
-                          disabled="true"
-                        />
-                      )}
-                      <EditOutlined
-                        onClick={() => enableChangePersonInfo(index)}
-                      />
-                    </div>
+                      </div>
+                    </Space>
                   ))}
 
                   <Modal
@@ -322,7 +325,7 @@ const Profile = () => {
                 </Col>
               </Row>
             </div>
-            <div className="space-item m-15">
+            <div className="space-item mh-item m-15">
               <Tabs
                 defaultActiveKey="1"
                 type="card"

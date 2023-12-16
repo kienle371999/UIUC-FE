@@ -1,5 +1,5 @@
 .profile-site {
-  height: 100vh;
+  height: 100%;
 }
 
 .profile-content {
@@ -50,4 +50,8 @@
 
 .fl-right {
   float: right;
+}
+
+.mh-item {
+  min-height: 70vh;
 }

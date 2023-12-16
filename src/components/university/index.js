@@ -74,19 +74,31 @@ const University = () => {
                   </Title>
                   <Select
                     className="selection-item"
-                    defaultValue="lucy"
-                    options={[{ value: "lucy", label: "Lucy" }]}
+                    defaultValue="Select"
+                    options={[
+                      { value: "2016 Conference", label: "2016 Conference" },
+                      { value: "Aaron Driver", label: "Aaron Driver" },
+                      { value: "Aaron Dusso", label: "Aaron Dusso" },
+                      { value: "Aaron Edlin", label: "Aaron Edlin" },
+                    ]}
                   />
                 </Col>
                 <Col span={8}>
                   <Title className="ml-0" level={5}>
                     Major
                   </Title>
-
                   <Select
                     className="selection-item"
-                    defaultValue="lucy"
-                    options={[{ value: "lucy", label: "Lucy" }]}
+                    defaultValue="Select"
+                    options={[
+                      { value: "Computer Science", label: "Computer Science" },
+                      {
+                        value: "Electrical Engineering",
+                        label: "Electrical Engineering",
+                      },
+                      { value: "Economics", label: "Economics" },
+                      { value: "Mathematics", label: "Mathematics" },
+                    ]}
                   />
                 </Col>
                 <Col span={8}>
@@ -96,8 +108,13 @@ const University = () => {
 
                   <Select
                     className="selection-item"
-                    defaultValue="lucy"
-                    options={[{ value: "lucy", label: "Lucy" }]}
+                    defaultValue="Select"
+                    options={[
+                      { value: "Finance", label: "Finance" },
+                      { value: "Demography", label: "Demography" },
+                      { value: "Geography", label: "Geography" },
+                      { value: "Replication Data", label: "Replication Data" },
+                    ]}
                   />
                 </Col>
               </Row>
