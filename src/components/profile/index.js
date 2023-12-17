@@ -247,7 +247,7 @@ const Profile = () => {
     switch (item) {
       case "PUBLICATIONS":
         return (
-          <div>
+          <div className="grid-item">
             {selectedPublications.map((pub, index) => (
               <Space direction="vertical">
                 <Text>{pub.authors}</Text>
@@ -257,7 +257,6 @@ const Profile = () => {
               </Space>
             ))}
             <Pagination
-              className="fl-right"
               defaultCurrent={1}
               pageSize={3}
               total={publications.length}
@@ -267,7 +266,7 @@ const Profile = () => {
         );
       case "AWARDS":
         return (
-          <div>
+          <div className="grid-item">
             {selectedAwards.map((award, index) => (
               <Space direction="vertical">
                 <Text>{award.author}</Text>
@@ -277,7 +276,6 @@ const Profile = () => {
               </Space>
             ))}
             <Pagination
-              className="fl-right"
               defaultCurrent={1}
               pageSize={3}
               total={awards.length}
@@ -315,7 +313,7 @@ const Profile = () => {
                 </Col>
                 <Col span={20}>
                   {personItems.map((item, index) => (
-                    <Space direction="vertical">
+                    <div>
                       <Text strong>{item.key}</Text>
                       <div>
                         {item.key === "Description" ? (
@@ -335,7 +333,7 @@ const Profile = () => {
                           onClick={() => enableChangePersonInfo(index)}
                         />
                       </div>
-                    </Space>
+                    </div>
                   ))}
 
                   <Modal
